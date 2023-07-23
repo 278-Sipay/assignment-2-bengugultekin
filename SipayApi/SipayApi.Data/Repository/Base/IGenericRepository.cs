@@ -8,6 +8,7 @@ public interface IGenericRepository<Entity> where Entity : class
     void Delete (Entity entity);
     void DeleteById(int id);
     List<Entity> GetAll();
+    IEnumerable<Entity> Where(Expression<Func<Entity, bool>> expression);
     IQueryable<Entity> GetAllAsQueryable();
 
 
